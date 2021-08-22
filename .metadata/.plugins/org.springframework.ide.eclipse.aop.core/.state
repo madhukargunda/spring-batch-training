@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="training-springbatch-dbjobrepository"/>
+<aop-project name="training-springbatch-inmemoryconfiguration"/>
+<aop-project name="springbatch-hello-world"/>
+<aop-project name="training-springbatch-dataprocessing"/>
+</aop-reference-model>

@@ -1,0 +1,5 @@
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-inmemoryconfiguration/src/main/resources/application-context-job.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph>\n<element clazz\="JobModelElement" type\="job">\n<structure end\="1191" endstart\="1179" start\="912" startend\="969"/>\n<bounds height\="118" width\="117" x\="15" y\="17"/>\n</element>\n</graph>
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-inmemoryconfiguration/src/main/resources/job-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-inmemoryconfiguration/src/main/resources/job-inmemory-repository.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-inmemoryconfiguration/src/main/resources/job-repository-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
+eclipse.preferences.version=1

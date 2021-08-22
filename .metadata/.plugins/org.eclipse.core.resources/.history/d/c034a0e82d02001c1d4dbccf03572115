@@ -1,0 +1,18 @@
+package study.pattern.training.dataprocessing;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class StudentDataProcessing {
+
+	public static void main(String[] args) {
+		
+	 //Step1 : Create the ApplicationContext Container by passing the configuration file
+	
+		ApplicationContext context = new ClassPathXmlApplicationContext("student-data-processing-context.xml");
+		
+		
+		
+	}
+	
+}

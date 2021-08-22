@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/batch https://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- Configured Inmemory Job Repository and Job Launcher -->
+
+	<bean id="transactionManager"
+		class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+
+
+	<bean id="jobRepository"
+		class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+
+
+   <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+   	  <property name="jobRepository" ref="jobRepository"/>
+   </bean>
+
+
+    <bean id="myOwnReader" class="study.pattern.batchhelloworld.reader.MyOwnImplementationItemReader"/>
+    
+    <bean id="myOwnProcessor" class="study.pattern.batchhelloworld.processor.MyOwnImplementationItemProcessor"/>
+
+    <bean id="myOwnWriter" class="study.pattern.batchhelloworld.writer.MyOwnImplemetationItemWriter"/>
+    
+    
+    <!--  This is a tasklet performing single task -->
+  
+    <bean id="myOwnTasklet" class="study.pattern.batchhelloworld.tasklet.MyOwnTasklet"/>
+
+
+<!-- Configuring the Job -->
+
+  <batch:job id="helloworld">
+     <batch:step id="step1" next="step2">
+       <tasklet>
+         <!--  Chunk based model we are going to define here -->
+	    	<batch:chunk reader="myOwnReader" processor="myOwnProcessor" writer="myOwnWriter" commit-interval="1"/>
+       </tasklet>
+     </batch:step>
+     
+     
+      <batch:step id="step2">
+       <tasklet ref="myOwnTasklet" />
+     </batch:step>
+     
+   </batch:job>  
+
+</beans>

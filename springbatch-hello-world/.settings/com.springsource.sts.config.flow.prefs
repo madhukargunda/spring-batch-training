@@ -1,0 +1,2 @@
+//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/springbatch-hello-world/src/main/resources/hello-world-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph>\n<element clazz\="JobModelElement" type\="job">\n<structure end\="2121" endstart\="2109" start\="1702" startend\="1729"/>\n<bounds height\="168" width\="114" x\="15" y\="17"/>\n</element>\n</graph>
+eclipse.preferences.version=1
