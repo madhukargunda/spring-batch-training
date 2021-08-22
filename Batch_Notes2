@@ -1,0 +1,186 @@
+S.no ,First_name , last_name
+1,	madhu42345345345345345,g
+2,	travis,t
+3,  rAJA , D
+4,  RITS , R
+
+
+
+<step id="step1" parent="s1">
+    <end on="FAILED" />
+    <next on="COMPLETED WITH SKIPS" to="errorPrint1" />
+    <next on="*" to="step2" />
+</step>
+
+
+<step id="errorPrint1">
+
+</step>
+
+1.Step1 - got failed  -
+  
+    Write logic - StepExecution.setExitStatus("FAILED") 
+    end on --- Stop the job
+     JobExecution.setBatchStatus("FAILED")
+
+
+
+            BATCH STATUS             EXIT STATUS
+     job       COMPLETED         SOME_RECORD_SKIPPED
+               COMPLETED		  COMPLETED
+
+
+
+
+Batch job name   -> DailyRunJob   - SimpleJob
+Number of steps in batch job : 5
+When its FAILED - AFTER 5 MIN - RUN THE JOB AGAIN 
+HOW RUN : 3
+
+Input Parameters :
+
+   File Name
+   FiLE path 
+   
+
+
+Confiugration :    Run Daily 
+
+Time :  10:30 AM
+
+    Yesterday STATUS : SUCCESS
+    Today :     FAILED - STEP 2 
+    second time : Run from failed step - Step 2
+
+
+    JobIntance -   InstanceID-1
+                   InstanceID-2 ((STEP1 ,STEP 2 )
+
+
+   Job 100 steps : 
+      99 th step : 
+
+
+
+
+JobInstance : DailyRunJob, 1
+JobInstance : DailyRunJob, 1
+
+JobInstance : DailyRunJob, 2
+
+
+
+
+One usecase : 
+
+  5 steps 
+
+  any of the step some exceptions while reading ,or processing , writing 
+  not stopping batch job , still continue your job
+
+
+  After procesing 5 stpes 
+
+     Decesion : you get all the exceptions , exception count or type of exception 
+
+        JOB :  BATCH STATUS , EXTI STATUS
+
+        	  BATCH STATUS  : COMPLETED
+        	  EXIT STAUS : TOO_MANY_EXCEPTION_REVIEW
+
+
+
+Ecommerse
+
+   - Order 
+   - Product 
+   - User
+   - Merchant
+   - Payment class
+
+
+CPF :
+
+  Domain Object
+
+    Employe
+    Employer
+    Client
+    User
+
+  
+
+Spring Batch Domain Objects :
+
+    Job
+    JobLauncher
+    JobParameters
+    StepExecution
+    JobExecution
+    JobInstance
+    JobExecution 
+    .... etc
+
+
+   CheckedExceptions :-
+
+
+
+    JobExecutionAlreadyRunningException,
+    JobRestartException,
+    JobInstanceAlreadyCompleteException,
+    JobParametersInvalidException
+
+
+
+     JobExecution jobExection = new SimpleJobLuancher.run(new SimpleJob() , new JobParameters());
+
+
+     if(jobExection.isRunning()){
+        Sysout("JobRunning is in progress")
+     }
+
+         - 
+
+
+
+
+
+   Step
+
+     1. Chunk
+
+        - Commit-interval
+	        - reader  -ItemReader
+	        - writer  -ItemWriter
+        
+
+             -reader
+             -processor -ItemProcessor
+             -writer
+
+
+             
+     2. Tasklet
+
+     	 Takslet - inerface
+     	 singlee opeation 
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

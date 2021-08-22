@@ -1,0 +1,133 @@
+
+
+
+Spring Core Concepts
+
+
+1.Dependeny Injection/IOC Control.
+2.Different types of the Spring Containers.
+3.How to write bean definition file
+4.Spring Configuration using XML 
+5.Spring Autoscan and register the beans to 
+6.
+hi ok
+
+
+
+How to send 
+
+
+<!-- 	<bean name="firstName"
+		class="study.pattern.collectionBeans.beans.Person">
+		<property name="booksInterested">
+			<list>
+				<value>Microservices</value>
+				<value>Docker</value>
+				<value>Junit</value>
+			</list>
+		</property>
+
+		<property name="address"> <list> or <set> <ref bean =""/> <ref bean=""/> 
+			</list> </property>
+
+
+		<property name="marks"> <map> <entry key ="" value=""/> </list> </property>
+
+
+	</bean> -->
+
+
+
+
+Aug 7t,20201
+
+=================
+
+Job Name : student-data-proccessing
+
+Requirments :-
+
+   1.We are going use spring batch implemented classes ( Implementation of itemreader , itemwriter , itemprocessor)
+   2.Create a CSV file from one folder read the data, process , write to another folder.
+       Read ,Process,write
+
+         Step1 :  Read the data, process the data , write to another folder
+
+              a.Read the  CSV file data 
+        	
+        	     LineMapper
+        	       - Reads the each line from the file and convert into java object ( Java as a platform and spring as a framework)
+        	       - Each line having the coma as a seperator
+        	       - some companies/data  will use # , | 
+        	       - you have to read each data field separated by comma
+        	       - 1,"Madhu",100,"A"
+
+        	          -  Tokenizer will reads the data based on the delimiter (",")
+        	          -  Each data will be stored  in FieldSet Object after tokenizing.
+        	          -  Form this field set we have to read the data and store into our own java object.
+        	          -  This object will be shared to ItemProcessor by Step (internally logic will be part of the spring batch)
+
+			    b.Process the data
+
+        	      Criteria 1: score= above 70 and grade=A ,result=PASS
+        	      Criteria 2: score=below 70 and grade=A , result=PASS
+        	      Criteria 3: score=below 70 and grade not A , result=FAIL
+
+        	    c.Write the processed data into another file 
+
+        	   		- Converting the java Object (List<Student> ) records to a file
+        	   		- List<Student>
+        	   		  - Each student object contains the properites and spring batch will convert to fieldset object.
+        	   		  - Each property value has to be written to a file.
+        	   		  - Each property value has to be separated by comma
+        	   		  - Each record has to be written into new line
+
+
+
+
+
+         Step 2: Generate the report and send email to department.
+
+         Step 3 : Delete the file from the folder.
+
+   3.  Travis - pick 5 balls 
+       yousuf - pick 1 ball
+
+
+       ANOTHER BAG
+        -
+        -
+
+
+
+
+Aug 21st
+=====================
+
+Operating system level
+
+	Windows OS
+	 - Batch script (Job) 
+	    Example : java <<name_of_the_class>>
+	 - place it into some folder
+	 - using Taskschedular you configure this job
+
+
+	Linux os
+	  - shell script
+	  - cron tab utiltiy tool to configure this 
+
+
+Programming level
+
+    Java 
+     - Quartz
+
+    Java+Spring
+     - Quartz
+     - ???
+
+
+    Java+spring boot
+     - Quartz
+
