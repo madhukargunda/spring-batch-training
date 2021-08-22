@@ -1,9 +1,0 @@
-package study.pattern.training.dataprocessing;
-
-public class StudentDataProcessing {
-
-	public static void main(String[] args) {
-		System.out.println("Running the batch Job");
-	}
-	
-}

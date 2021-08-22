@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;training-batch-jobrepository&apos; to &apos;training-springbatch-dbjobrepository&apos;" description="Rename resource &apos;training-batch-jobrepository&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/training-batch-jobrepository" name="training-springbatch-dbjobrepository" stamp="1625389590305" updateReferences="true"/>
-</session>

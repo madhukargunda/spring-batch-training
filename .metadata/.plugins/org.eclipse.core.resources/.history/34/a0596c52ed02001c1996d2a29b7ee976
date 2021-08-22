@@ -1,5 +1,0 @@
-//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-batch-jobrepository/src/main/resources/batch-job-repository.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
-//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-batch-jobrepository/src/main/resources/job-configuration-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
-//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-dbjobrepository/src/main/resources/batch-job-job-repository.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
-//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/batch\:/training-springbatch-dbjobrepository/src/main/resources/data-processing-database-repository-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph/>
-eclipse.preferences.version=1
